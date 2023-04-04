@@ -1,4 +1,3 @@
-// funktion för att lista table i sidor
 function cellHeaders(tableId) {
   try {
     let thArray = [];
@@ -34,14 +33,12 @@ let pageList = new Array()
 let currentPage = 1
 const numberPerPage = 12
 const rows = Array.prototype.slice.call(document.querySelectorAll('tbody tr'))
-// knappar för att navigera mellan sidor
 const firstBtn = document.getElementById('first')
 const lastBtn = document.getElementById('last')
 const prevBtn = document.getElementById('prev')
 const nextBtn = document.getElementById('next')
 const numberOfPages = getNumberOfPages()
 const pageNumbers = document.getElementById('pageNumbers')
-//eventlyssnare för klick på knappar
 firstBtn.addEventListener('click', firstPage, false)
 lastBtn.addEventListener('click', lastPage, false)
 prevBtn.addEventListener('click', prevPage, false)
@@ -52,7 +49,6 @@ window.onload = load(numberOfPages)
 function getNumberOfPages() {
   return Math.ceil(rows.length / numberPerPage)
 }
-//generera sidnummer
 function generatePageNumbers(pageCount) {
   for (let j = 1; j <= pageCount; j++) {
     const pageNumber = document.createElement('span')
@@ -65,7 +61,6 @@ function generatePageNumbers(pageCount) {
     pageNumber.addEventListener('click', jumpToPage, false)
   }
 }
-//funktion för att komma till vald sida
 function jumpToPage(event) {
   currentPage = event.target.innerHTML
   loadRows()
@@ -135,6 +130,3 @@ function load(pageCount) {
   generatePageNumbers(numberOfPages)
   loadRows()
 }
-
-
-

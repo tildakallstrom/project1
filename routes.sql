@@ -1,32 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.1.0
--- https://www.phpmyadmin.net/
---
--- Värd: 127.0.0.1
--- Tid vid skapande: 27 jun 2021 kl 13:40
--- Serverversion: 10.4.18-MariaDB
--- PHP-version: 8.0.3
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Databas: `arbetsprovet`
---
-
--- --------------------------------------------------------
-
---
--- Tabellstruktur `routes`
---
-
 CREATE TABLE `routes` (
   `routeId` char(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `licensePlate` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -46,10 +17,6 @@ CREATE TABLE `routes` (
   `odometerStart` int(11) DEFAULT NULL,
   `odometerStop` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumpning av Data i tabell `routes`
---
 
 INSERT INTO `routes` (`routeId`, `licensePlate`, `timeStart`, `timeEnd`, `distance`, `travelTime`, `startAddress`, `stopAddress`, `routeType`, `liters`, `cost`, `firstLat`, `firstLon`, `lastLat`, `lastLon`, `odometerStart`, `odometerStop`) VALUES
 ('100_200618n4', 'MLB021', '20200618155910', '20200618160057', 1.60308, 107, 'Bataljonsgatan 16, 553 05 Jönköping, Sverige', 'Hästhovsvägen 6, 554 54 Jönköping, Sverige', 'Privatresa', 0.0556237, 0.772057, 57.7753048, 14.2119796, 57.7799411, 14.2250674, 11887, 11889),
@@ -2062,18 +2029,7 @@ INSERT INTO `routes` (`routeId`, `licensePlate`, `timeStart`, `timeEnd`, `distan
 ('99_200803n6', 'MLB019', '20200803170209', '20200803170511', 1.68318, 182, 'Kämpevägen 21, 553 02 Jönköping, Sverige', 'Solåsvägen 22, 553 03 Jönköping, Sverige', 'Kundresa', 0.114456, 1.58293, 57.7637482, 14.1640594, 57.7620557, 14.1849288, 2629, 2630),
 ('99_200805n6', 'MLB019', '20200805182937', '20200805183459', 2.91614, 322, 'Torpaplan 2, 553 33 Jönköping, Sverige', 'Herkulesvägen 12, 553 03 Jönköping, Sverige', 'Tjänsteres', 0.198298, 2.75237, 57.7717217, 14.1513014, 57.7710979, 14.1745433, 2677, 2680);
 
---
--- Index för dumpade tabeller
---
-
---
--- Index för tabell `routes`
---
 ALTER TABLE `routes`
   ADD PRIMARY KEY (`routeId`),
   ADD KEY `idx_routes_timeStart` (`timeStart`,`timeEnd`);
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

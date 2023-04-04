@@ -1,62 +1,70 @@
-/* skapad av Tilda Källström 2021 */
-/* rensar allt inför egen kod*/
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+JP:wght@300&display=swap');
 
 body {
-    max-width: 100%;
+  max-width: 100%;
 }
-/* logga */
+
 .logo {
-    max-width: 250px;
-    margin: auto;
+  max-width: 250px;
+  margin: auto;
 }
-/* introdiv*/
+
 .intro {
-    max-width: 400px;
-    margin: auto;
-    border-radius: 20px;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 20px;
 }
-/* sökformulär*/
+
 .searchfor {
-    max-width: 260px;
-    margin: auto;
+  max-width: 260px;
+  margin: auto;
 }
+
 input[type=text] {
-    border: none;
-    border-bottom: solid black;
+  border: none;
+  border-bottom: solid black;
 }
-h1, h2 {
-    font-family: 'Univia Regular',Helvetica,Arial,Lucida,sans-serif;
-    text-align: center;
-}
+
+h1,
 h2 {
-    margin-top: 2em;
+  font-family: 'Univia Regular', Helvetica, Arial, Lucida, sans-serif;
+  text-align: center;
 }
-p, span, label {
-        font-family: 'Univia Regular',Helvetica,Arial,Lucida,sans-serif;
+
+h2 {
+  margin-top: 2em;
 }
+
+p,
+span,
+label {
+  font-family: 'Univia Regular', Helvetica, Arial, Lucida, sans-serif;
+}
+
 a {
-    color: black;
+  color: black;
 }
+
 footer a {
-    color: lightgray;
+  color: lightgray;
 }
+
 main {
   display: flex;
   flex-direction: column;
   padding: 1em;
   align-items: center;
 }
-/* table för all info från db */
+
 .table-wrapper {
   overflow: auto;
   max-width: 100%;
   background:
-    linear-gradient(to right, white 30%, rgba(255,255,255,0)),
-    linear-gradient(to right, rgba(255,255,255,0), white 70%) 0 100%,
-    radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)),
-    radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+    linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%,
+    radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
   background-repeat: no-repeat;
   background-color: white;
   background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
@@ -66,13 +74,13 @@ main {
 
 tr {
   border-bottom: 1px solid;
-      font-family: 'Univia Regular',Helvetica,Arial,Lucida,sans-serif;
+  font-family: 'Univia Regular', Helvetica, Arial, Lucida, sans-serif;
 }
 
 th {
   background-color: #555;
   color: #fff;
-      font-family: 'Univia Regular',Helvetica,Arial,Lucida,sans-serif;
+  font-family: 'Univia Regular', Helvetica, Arial, Lucida, sans-serif;
 }
 
 th,
@@ -80,14 +88,15 @@ td {
   text-align: left;
   padding: 0.5em 1em;
   white-space: nowrap;
-      font-family: 'Univia Regular',Helvetica,Arial,Lucida,sans-serif;
+  font-family: 'Univia Regular', Helvetica, Arial, Lucida, sans-serif;
 }
 
 .hidden {
   display: none;
 }
-/* styling för knappar */
-button, .btn {
+
+button,
+.btn {
   font-size: inherit;
   margin: 0 0.2em;
   padding: 0.3em 0.5em;
@@ -95,22 +104,23 @@ button, .btn {
   color: #fff;
   border: 0;
   transition: color 0.4s;
-  font-family: 'Univia Regular',Helvetica,Arial,Lucida,sans-serif;
+  font-family: 'Univia Regular', Helvetica, Arial, Lucida, sans-serif;
 }
-  button:hover {
-    background-color: lightgray;
-    color: black;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-    .btn:hover {
-    background-color: lightgray;
-    color: black;
-    cursor: pointer;
-    transition: 0.3s;
-  }
 
-/* sidvisning */
+button:hover {
+  background-color: lightgray;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: lightgray;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -121,74 +131,80 @@ button, .btn {
 
 .page-numbers {
   margin-top: 2em;
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
- max-width: 100%;
- margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: auto;
 }
 
 .page-number {
- padding: 0.2em;
- font-size: 1.1em;
+  padding: 0.2em;
+  font-size: 1.1em;
 }
 
 .page-number:hover {
-    cursor: pointer;
-    text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
+
 .active {
   color: black;
   text-decoration: underline;
 }
-/*div med reg.nr*/
+
 .cars {
-    max-width: 500px;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin:auto;
+  max-width: 500px;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin: auto;
 }
+
 .centerp {
-    text-align: center;
+  text-align: center;
 }
+
 li {
-    list-style-type: none;
-    font-family: 'Univia Regular',Helvetica,Arial,Lucida,sans-serif;
-    padding: 10px;
+  list-style-type: none;
+  font-family: 'Univia Regular', Helvetica, Arial, Lucida, sans-serif;
+  padding: 10px;
 }
+
 .grids {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-/*länk till tillbaka*/
+
 .centera {
-    color: black;
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 1em;
+  color: black;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 1em;
 }
-/* div för total */
+
 .total {
-    max-width: 400px;
-    margin: auto;
-    border: 3px solid #88cef7;
-    border-radius: 20px;
+  max-width: 400px;
+  margin: auto;
+  border: 3px solid #88cef7;
+  border-radius: 20px;
 }
+
 .totalp {
-    margin-left: 2em;
-    margin-right: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
 }
-/*footer*/
+
 .littlefooterp {
-        font-family: 'Univia Regular',Helvetica,Arial,Lucida,sans-serif;
-        text-align: center;
-        padding: 1em;
-        margin-bottom: -1em;
+  font-family: 'Univia Regular', Helvetica, Arial, Lucida, sans-serif;
+  text-align: center;
+  padding: 1em;
+  margin-bottom: -1em;
 }
+
 footer {
-    background-color: black;
-    color: lightgray;
+  background-color: black;
+  color: lightgray;
 }
 
 
@@ -201,7 +217,7 @@ footer {
     order: 2;
     margin-top: 0;
   }
-  
+
   .forward {
     order: 3;
   }

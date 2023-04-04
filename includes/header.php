@@ -1,20 +1,17 @@
 <?php
-//Tilda Källström 2021 
 include_once('config.php');
 ?>
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arbetsprov</title> <!-- titel på sidan -->
+    <title>Arbetsprov</title> 
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="icon" 
       type="image/png" 
       href="bilder/favicon.png">
 </head>
-
 <body>
   <header>
           <div class="logo">
